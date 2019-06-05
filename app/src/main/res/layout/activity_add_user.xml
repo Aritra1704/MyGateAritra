@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddUserActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/civProfileImage"
+        android:layout_width="@dimen/m_200"
+        android:layout_height="@dimen/m_200"
+        android:src="@drawable/ic_profile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:onClick="onTakePic"
+        android:layout_marginTop="@dimen/m_50"/>
+
+    <EditText
+        android:id="@+id/edtProfileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_40"
+        android:layout_marginLeft="@dimen/m_16"
+        android:hint="User name"
+        android:textSize="@dimen/t_26"
+        app:layout_constraintTop_toBottomOf="@id/civProfileImage" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/m_20"
+        android:padding="@dimen/m_20"
+        android:text="Submit"
+        android:textSize="@dimen/t_20"
+        android:onClick="onSubmit"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pbLoading"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>
